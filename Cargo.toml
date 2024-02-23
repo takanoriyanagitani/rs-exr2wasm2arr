@@ -1,0 +1,36 @@
+[package]
+name = "dat2wasm2img"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[profile.release-wasm]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 7
+
+[dependencies.exr]
+version = "1.72"
+default-features = false
+optional = true
+features = [
+]
+
+[features]
+default = [
+	"exr_jv",
+]
+
+exr_jv = [
+	"exr",
+]
