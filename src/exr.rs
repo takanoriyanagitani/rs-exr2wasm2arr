@@ -37,6 +37,7 @@ pub extern "C" fn exr_ptr() -> *const u8 {
     }
 }
 
+/// Gets the width of an exr image.
 #[allow(unsafe_code)]
 #[no_mangle]
 pub extern "C" fn exr_width() -> i32 {
