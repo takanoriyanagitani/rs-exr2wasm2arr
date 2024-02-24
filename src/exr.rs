@@ -1,3 +1,5 @@
+//! An instance of an exr image(most functions depend on the internal state).
+
 use std::io::{Cursor, Read, Seek};
 use std::sync::RwLock;
 
@@ -48,6 +50,7 @@ pub extern "C" fn exr_width() -> i32 {
         .unwrap_or(-1)
 }
 
+/// Gets the height of an exr image.
 #[allow(unsafe_code)]
 #[no_mangle]
 pub extern "C" fn exr_height() -> i32 {
