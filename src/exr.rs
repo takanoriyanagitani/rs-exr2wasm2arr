@@ -80,6 +80,7 @@ fn _exr_msg_sz() -> Result<usize, &'static str> {
     Ok(o.as_ref().map(|s| s.len()).unwrap_or(0))
 }
 
+/// Gets the size of the error message of this instance.
 #[allow(unsafe_code)]
 #[no_mangle]
 pub extern "C" fn exr_msg_sz() -> i32 {
