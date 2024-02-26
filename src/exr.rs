@@ -223,6 +223,7 @@ fn _exr_reset(sz: usize) -> Result<usize, &'static str> {
     Ok(sz)
 }
 
+/// Resets the buffer for an exr image using Vec::resize.
 #[allow(unsafe_code)]
 #[no_mangle]
 pub extern "C" fn exr_reset(sz: i32) -> i32 {
