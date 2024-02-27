@@ -241,6 +241,7 @@ fn y2img32f(cap: usize) -> Result<usize, &'static str> {
     _y2img32f(s, cap)
 }
 
+/// Decodes an EXR image and store its Y channel data in a `Vec<f32>`.
 #[allow(unsafe_code)]
 #[no_mangle]
 pub extern "C" fn y2image32f(cap: i32) -> i32 {
