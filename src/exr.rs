@@ -111,6 +111,7 @@ fn exr_set_err(e: exr::error::Error) -> Result<(), &'static str> {
     }
 }
 
+/// Returns the offset of an input exr image bytes
 #[allow(unsafe_code)]
 #[no_mangle]
 pub extern "C" fn exr_input_ptr() -> *const u8 {
